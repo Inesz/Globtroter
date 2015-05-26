@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="711967d8-aa1e-4912-a221-cec2cbf03ecf" Publisher="CN=agua" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Globtroter</DisplayName>
+    <PublisherDisplayName>agua</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Globtroter.App">
+      <VisualElements DisplayName="Globtroter" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Globtroter" ForegroundText="light" BackgroundColor="#464646">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\logo24.jpg" />
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\Logo310x150.jpg" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.shareTarget">
+          <ShareTarget>
+            <DataFormat>Bitmap</DataFormat>
+          </ShareTarget>
+        </Extension>
+        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.BlogFeedBackgroundTask">
+          <BackgroundTasks>
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+        <Extension Category="windows.search" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>AGU</Machine>
+    <WindowsUser>agua</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>553A3CBBD91F788E798413E6415C313C531865B0330B0A0632769415763F4708</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>711967d8-aa1e-4912-a221-cec2cbf03ecf_1.0.0.0_neutral__0awma0x9awjy0</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>711967d8-aa1e-4912-a221-cec2cbf03ecf_0awma0x9awjy0!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>711967d8-aa1e-4912-a221-cec2cbf03ecf</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=agua</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-26T21:45:55.703</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
+      <PackagePath>Globtroter.exe</PackagePath>
+      <Modified>2015-05-26T21:45:35.865</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
+      <PackagePath>Globtroter.pdb</PackagePath>
+      <Modified>2015-05-26T21:45:35.759</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
+      <PackagePath>BackgroundTasks.pdb</PackagePath>
+      <Modified>2015-05-15T10:33:00.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.winmd">
+      <PackagePath>BackgroundTasks.winmd</PackagePath>
+      <Modified>2015-05-15T10:33:00.799</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\logo128.jpg">
+      <PackagePath>Assets\logo128.jpg</PackagePath>
+      <Modified>2015-05-13T04:00:50.167</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\logo24.jpg">
+      <PackagePath>Assets\logo24.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-13T04:01:09.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\Logo310x150.jpg">
+      <PackagePath>Assets\Logo310x150.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-13T04:20:54.080</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2015-05-01T14:43:32.785</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2015-05-01T22:26:40.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T14:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\SearchResultsPage1.xaml">
+      <PackagePath>SearchResultsPage1.xaml</PackagePath>
+      <Modified>2015-05-13T06:48:49.046</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\artist.xaml">
+      <PackagePath>ViewModel\artist.xaml</PackagePath>
+      <Modified>2015-05-03T12:13:01.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryDescribe.xaml">
+      <PackagePath>ViewModel\GalleryDescribe.xaml</PackagePath>
+      <Modified>2015-05-01T15:28:24.367</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryGroups.xaml">
+      <PackagePath>ViewModel\GalleryGroups.xaml</PackagePath>
+      <Modified>2015-05-15T10:30:59.363</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\MainPage.xaml">
+      <PackagePath>ViewModel\MainPage.xaml</PackagePath>
+      <Modified>2015-05-11T15:49:27.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\SaveFoto.xaml">
+      <PackagePath>ViewModel\SaveFoto.xaml</PackagePath>
+      <Modified>2015-05-12T16:01:48.390</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-05-26T21:45:37.179</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Globtroter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Globtroter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Image Name="image" />
+        <CaptureElement Name="captureElement" />
+
+        <Button x:ConnectionId='1' Content="Zrób zdjęcie"
+                FontSize="48"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                                             />
+        <Button x:ConnectionId='2' Content="Zapisz"
+                FontSize="48"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                                          />
+        <Button x:ConnectionId='3' Content="Galeria"
+                FontSize="48"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                                              />
+
+    </Grid>
+</Page>
+

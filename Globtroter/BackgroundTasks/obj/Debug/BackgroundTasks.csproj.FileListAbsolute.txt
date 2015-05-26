@@ -1,0 +1,16 @@
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.winmd
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pri
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.winmd
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.pdb
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.winmdobj
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.compile.pdb
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\priconfig.xml
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\layout.resfiles
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\resources.resfiles
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\pri.resfiles
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\LanguageQualifiers.txt
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\priconfig.xml.intermediate
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\layout.resfiles.intermediate
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\resources.resfiles.intermediate
+C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\BackgroundTasks\obj\Debug\pri.resfiles.intermediate
