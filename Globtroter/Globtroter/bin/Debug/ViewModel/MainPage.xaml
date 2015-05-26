@@ -8,31 +8,27 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        
         <Image Name="image" />
-
-        <Button x:ConnectionId='1' Content="Zrób zdjęcie"
-                FontSize="48"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                                             />
-        <Button x:ConnectionId='2' Content="Dodaj do Galerii"
-                FontSize="48"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                                          />
-        <Button x:ConnectionId='3' Content="Galeria"
-                FontSize="48"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
-                                              />
-
-        <Button x:ConnectionId='4' Content="artist"
-                FontSize="48"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                                             Margin="507,149,0,0" />
-       
     </Grid>
+
+    <Page.BottomAppBar>
+        <AppBar IsSticky="True" IsOpen="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Button x:ConnectionId='1'                              Style="{StaticResource PhotoAppBarButtonStyle}" AutomationProperties.Name="Zrób zdjęcie"/>
+                    <Button x:ConnectionId='2'                            Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
+                    <Button x:ConnectionId='3'                               Style="{StaticResource PicturesAppBarButtonStyle}" AutomationProperties.Name="Galeria"/>
+                    <Button x:ConnectionId='4'                              Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Grupy"/>
+                    <Button x:ConnectionId='5'                              Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Artist"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>
 

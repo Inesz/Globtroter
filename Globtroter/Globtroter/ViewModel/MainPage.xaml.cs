@@ -372,6 +372,11 @@ namespace Globtroter
         }
          * */
 
+        private void OnButtonClick_Groups(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         /*live lites*/
         private async void RegisterBackgroundTask()
         {
@@ -397,6 +402,7 @@ namespace Globtroter
 
         private const string taskName = "BlogFeedBackgroundTask";
         private const string taskEntryPoint = "BackgroundTasks.BlogFeedBackgroundTask";
+
         /**/
     }
 }

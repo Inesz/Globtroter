@@ -8,30 +8,26 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        
         <Image Name="image" />
-
-        <Button Content="Zrób zdjęcie"
-                FontSize="48"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="OnButtonClick_Create" />
-        <Button Content="Dodaj do Galerii"
-                FontSize="48"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Click="OnButtonClick_Save"/>
-        <Button Content="Galeria"
-                FontSize="48"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
-                Click="OnButtonClick_Gallery" />
-
-        <Button Content="artist"
-                FontSize="48"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Click="OnButtonClick_Artist" Margin="507,149,0,0" />
-       
     </Grid>
+
+    <Page.BottomAppBar>
+        <AppBar IsSticky="True" IsOpen="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Button Click="OnButtonClick_Create" Style="{StaticResource PhotoAppBarButtonStyle}" AutomationProperties.Name="Zrób zdjęcie"/>
+                    <Button Click="OnButtonClick_Save" Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
+                    <Button Click="OnButtonClick_Gallery" Style="{StaticResource PicturesAppBarButtonStyle}" AutomationProperties.Name="Galeria"/>
+                    <Button Click="OnButtonClick_Groups" Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Grupy"/>
+                    <Button Click="OnButtonClick_Artist" Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Artist"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>

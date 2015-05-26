@@ -44,7 +44,6 @@ C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\Globtroter\obj\De
 C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\Globtroter\obj\Debug\layout.resfiles.intermediate
 C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\Globtroter\obj\Debug\resources.resfiles.intermediate
 C:\Users\agua\Documents\Visual Studio 2012\Projects\Globtroter\Globtroter\obj\Debug\pri.resfiles.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.csprojResolveAssemblyReference.cache
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\App.g.i.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\App.g.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Common\StandardStyles.g.i.cs
@@ -80,10 +79,6 @@ C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\BackgroundTasks.pdb
 C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\BackgroundTasks.pri
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.exe
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.pdb
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\priconfig.xml.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\layout.resfiles.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles.intermediate
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\priconfig.xml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\layout.resfiles
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles
