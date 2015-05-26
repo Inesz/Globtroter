@@ -12,9 +12,27 @@
 
     <Page.Resources>
 
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml 
+        <x:String x:Key="AppName">My Application</x:String> -->
     </Page.Resources>
+    
+        <Page.BottomAppBar>
+            <AppBar IsSticky="True" IsOpen="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button Click="OnButtonClick_SaveChanges" Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
+                        <Button Click="OnButtonClick_CancelChanges" Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Anuluj"/>
+
+                </StackPanel>
+                </Grid>
+            </AppBar>
+        </Page.BottomAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -45,39 +63,46 @@
                 <ColumnDefinition Width="363*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
-            
-            <TextBlock Grid.Row="0" HorizontalAlignment="Left" Text="Tytuł:" VerticalAlignment="Top" Height="13" Width="26"/>
-            <TextBlock HorizontalAlignment="Left" Text="Data:" VerticalAlignment="Bottom" Height="13" Width="26" Margin="0,0,0,569"/>
-            <TextBlock Grid.Row="2" HorizontalAlignment="Left" Margin="58,88,0,0" Text="Grupa" VerticalAlignment="Top" Height="13" Width="30"/>
-            <TextBlock Grid.Row="3" HorizontalAlignment="Left" Margin="58,133,0,0" Text="Podgrupa" VerticalAlignment="Top" Height="13" Width="47"/>
-            <TextBlock Grid.Row="4" HorizontalAlignment="Left" Margin="58,175,0,0" TextWrapping="Wrap" Text="Lokalizacja" VerticalAlignment="Top" Height="13" Width="52"/>
-            <TextBlock Grid.Row="5" HorizontalAlignment="Left" Margin="53,222,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top" Height="13" Width="52"/>
 
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Tytuł:" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Data:" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Grupa:" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="3" Text="Podgrupa:" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="4" Text="Lokalizacja:" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="5" Text="Opis:" HorizontalAlignment="Center"/>
 
-            <TextBox x:Name="Name" Text="{Binding}" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="61,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
-            <TextBlock x:Name="Data" Text="{Binding}" HorizontalAlignment="Left" Margin="61,48,0,0" VerticalAlignment="Top" Height="13" Width="26"/>
-            <TextBlock x:Name="Group" Text="{Binding}" Grid.Column="1" HorizontalAlignment="Left" Margin="58,88,0,0" VerticalAlignment="Top" Height="13" Width="30"/>
-            <ComboBox SelectedItem="{Binding}" ItemsSource="{Binding}" SelectionChanged="ComboBoxSubgroup_SelectionChanged" x:Name="Subgroup" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="58,133,0,0" VerticalAlignment="Top" Width="277"/>
-            <TextBlock x:Name="Localization" Text="{Binding}" Grid.Column="1" HorizontalAlignment="Left" Margin="58,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="13" Width="52" />
-            <TextBox x:Name="Description" Text="{Binding}" Grid.Column="1" HorizontalAlignment="Left" Margin="61,222,0,0" VerticalAlignment="Top" Height="105" Width="274"/>
+            <TextBox   Grid.Column="1" Grid.Row="0" x:Name="Name"           Text="{Binding}"  HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300"/>
+            <TextBlock Grid.Column="1" Grid.Row="1" x:Name="Data"           Text="{Binding}" HorizontalAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock Grid.Column="1" Grid.Row="2" x:Name="Group"          Text="{Binding}"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
+            <ComboBox  Grid.Column="1" Grid.Row="3" x:Name="Subgroup"       SelectedItem="{Binding}" ItemsSource="{Binding}" SelectionChanged="ComboBoxSubgroup_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
+            <TextBox   Grid.Column="1" Grid.Row="4" x:Name="Localization"   Text="{Binding}" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" />
+            <TextBox   Grid.Column="1" Grid.Row="5" x:Name="Description"    Text="{Binding}" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
 
-            <Image x:Name="_currentFoto" Source="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Width="100" Height="100"/>
-        </Grid>
+            <Image x:Name="_currentFoto" Source="{Binding}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Grid.Column="2" Grid.Row="0" Width="500" Height="500"/>
+            </Grid>
 
+       
+        <!--
         <Grid VerticalAlignment="Bottom" Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            
             <Button Content="Zapisz" Grid.Column="0"  Margin="0,0,0,58" Click="OnButtonClick_SaveChanges"/>
             <Button Content="Anuluj" Grid.Column="1"  Margin="0,0,0,58" Click="OnButtonClick_CancelChanges"/>
             <Button Content="Wyślij" Grid.Column="1" RenderTransformOrigin="1.73,-0.421" Margin="78,0,0,58"  />
             
         </Grid>
-        
+        -->
          
         <VisualStateManager.VisualStateGroups>
 
