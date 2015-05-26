@@ -85,3 +85,4 @@ C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\LanguageQualifiers.txt
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ProjectArchitectures.txt
+C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.csprojResolveAssemblyReference.cache

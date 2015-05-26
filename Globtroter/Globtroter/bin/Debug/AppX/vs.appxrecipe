@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
       <PackagePath>Globtroter.exe</PackagePath>
-      <Modified>2015-05-26T22:21:49.719</Modified>
+      <Modified>2015-05-26T23:17:12.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
       <PackagePath>Globtroter.pdb</PackagePath>
-      <Modified>2015-05-26T22:21:49.471</Modified>
+      <Modified>2015-05-26T23:17:12.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
       <PackagePath>BackgroundTasks.pdb</PackagePath>
@@ -104,7 +104,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\SaveFoto.xaml">
       <PackagePath>ViewModel\SaveFoto.xaml</PackagePath>
-      <Modified>2015-05-12T16:01:48.390</Modified>
+      <Modified>2015-05-26T23:14:39.567</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
