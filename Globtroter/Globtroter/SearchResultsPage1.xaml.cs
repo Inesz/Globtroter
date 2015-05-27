@@ -171,6 +171,7 @@ namespace Globtroter
 */
 
 using Globtroter.Data;
+using Globtroter.ViewModel;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -196,13 +197,12 @@ namespace Globtroter
     /// </summary>
     public sealed partial class SearchResultsPage1 : Globtroter.Common.LayoutAwarePage
     {
+        public List<DataModel.Subgroups> results { get; set; }
 
         public SearchResultsPage1()
         {
             this.InitializeComponent();
         }
-
-        
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -234,7 +234,19 @@ namespace Globtroter
                 VisualStateManager.GoToState(this, "ResultsFound", true);
         }
 
-        public List<DataModel.Subgroups> results { get; set; }
+   
+
+        public void OnButtonClick_Subgroup(object sender, RoutedEventArgs e)
+        {
+            //pobierz wartośc tag z aktualnego guziczka
+            FrameworkElement eSource = e.OriginalSource as FrameworkElement;
+            string subgroup = eSource.Tag.ToString();
+
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(GalleryFoto), subgroup);
+            }
+        }
     }
 }
 
