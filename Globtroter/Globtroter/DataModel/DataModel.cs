@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace Globtroter.DataModel
@@ -78,7 +82,7 @@ namespace Globtroter.DataModel
     public class CurrentFoto
     {
         public CurrentFoto() { }
-  
+
         public string Subgroup { get; set; }
         public string Group { get; set; }
         public string Description { get; set; }
@@ -89,6 +93,7 @@ namespace Globtroter.DataModel
         public WriteableBitmap _currentFoto { get; set; }
     }
 
+
     public class SubgroupsOfGroup
     {
         public SubgroupsOfGroup(string GroupName) { this.GroupName = GroupName; }
@@ -96,5 +101,9 @@ namespace Globtroter.DataModel
         public string GroupName { get; set; }
         public List<Subgroups> Subgroups { get; set; }
     }
-
 }
+ 
+    
+
+
+

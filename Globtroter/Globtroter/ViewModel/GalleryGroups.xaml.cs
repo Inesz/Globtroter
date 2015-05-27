@@ -1,15 +1,10 @@
-﻿using Globtroter.Data;
+﻿using Globtroter.DataModel;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Storage;
-using Windows.Storage.Search;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -18,20 +13,16 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Grouped Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234231
+// The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
 
 namespace Globtroter.ViewModel
 {
     /// <summary>
-    /// A page that displays a grouped collection of items.
+    /// A page that displays a collection of item previews.  In the Split Application this page
+    /// is used to display and select one of the available groups.
     /// </summary>
-    // A simple business object
-   
-
     public sealed partial class GalleryGroups : Globtroter.Common.LayoutAwarePage
     {
-        //public ObservableCollection<Globtroter.Data.SampleDataGroup> MyMusic = new ObservableCollection<Recording>();
-        //System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataGroup> SampleDataGroups = new System.Collections.Generic.IEnumerable<SampleDataGroup>();
         public GalleryGroups()
         {
             this.InitializeComponent();
@@ -46,56 +37,30 @@ namespace Globtroter.ViewModel
         /// </param>
         /// <param name="pageState">A dictionary of state preserved by this page during an earlier
         /// session.  This will be null the first time a page is visited.</param>
-        
-
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            // TODO: Assign a collection of bindable groups to this.DefaultViewModel["Groups"]
+            // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
+            App myApp = Application.Current as App;
+            /*
+            SubgroupsOfGroup a = new SubgroupsOfGroup("Ania");
+            SubgroupsOfGroup b = new SubgroupsOfGroup("Kasia");
+            SubgroupsOfGroup c = new SubgroupsOfGroup("Tomek");
 
-            System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataGroup> sampleDataGroups = SampleDataSource.GetGroups((String)navigationParameter);
-            var group9 = new SampleDataGroup("Group-1",
-                   "Group Title: 1",
-                   "Group Subtitle: 1",
-                   "Assets/DarkGray.png",
-                   "Group Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
-            
-            //sampleDataGroups.Add(group9);
-            //this.DefaultViewModel["Groups"] = sampleDataGroups;
-            
-            
-           // var sampleDataGroups = App.Instance.DataSource.ItemGroups;
-            DefaultViewModel["Groups"] = sampleDataGroups;
-             
-            /**/
-            
- 
-            /**/
-                   
-            printFolder();
-        }
+            List<Subgroups> Subgroups = new List<Subgroups>();
+            Subgroups d = new Subgroups(); d.Name = "asas";
+            Subgroups e = new Subgroups(); e.Name = "ololol";
+            Subgroups.Add(d);
+            Subgroups.Add(e);
+            a.Subgroups = Subgroups;
 
-        public async void printFolder()
-        {
-            IReadOnlyList<StorageFolder> folderList = await takeFolder();
-            foreach (StorageFolder f in folderList)
-            {
-                Debug.WriteLine("    " + f.Name);
-            }
-        }
+            myApp.SubgroupsOfGroup.Add(a);
+            myApp.SubgroupsOfGroup.Add(b);
+            myApp.SubgroupsOfGroup.Add(c);
+            */
 
-        public async Task<IReadOnlyList<StorageFolder>> takeFolder()
-        {
+            
 
-            StorageFolder libraryFolder = KnownFolders.PicturesLibrary;
-            StorageFolder globtroterFolder = await libraryFolder.GetFolderAsync("Globtroter");
-            StorageFolderQueryResult queryResult = globtroterFolder.CreateFolderQuery();
-            IReadOnlyList<StorageFolder> folderList = await queryResult.GetFoldersAsync();
-            Debug.WriteLine("lista podfolderow:");
-            foreach (StorageFolder f in folderList)
-            {
-                Debug.WriteLine("    "+f.Name);
-            }
-            return folderList;
+            DefaultViewModel["Items"] = myApp.Subgroups;
         }
     }
 }
