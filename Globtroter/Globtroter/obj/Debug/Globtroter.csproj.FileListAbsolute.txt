@@ -52,8 +52,6 @@ C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\SearchResultsPage1.g.i.
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\SearchResultsPage1.g.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\artist.g.i.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\artist.g.cs
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryDescribe.g.i.cs
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryDescribe.g.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryGroups.g.i.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryGroups.g.cs
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\MainPage.g.i.cs
@@ -65,7 +63,6 @@ C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\App.xaml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Common\StandardStyles.xaml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\SearchResultsPage1.xaml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\artist.xaml
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryDescribe.xaml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryGroups.xaml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\MainPage.xaml
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\SaveFoto.xaml
@@ -86,7 +83,6 @@ C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\LanguageQualifiers.txt
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ProjectArchitectures.txt
 C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.csprojResolveAssemblyReference.cache
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\priconfig.xml.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\layout.resfiles.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles.intermediate
-C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles.intermediate
+C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryFoto.g.i.cs
+C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryFoto.g.cs
+C:\Users\agua\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryFoto.xaml

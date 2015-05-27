@@ -49,12 +49,15 @@
 
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="20">
-                        <TextBlock Text="{Binding Name}" FontWeight="Bold" 
+                    <Button x:ConnectionId='2'                               
+                            Tag="{Binding Name}"> 
+                        <StackPanel Margin="20">
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" 
                            Style="{StaticResource BasicTextStyle}"/>
-                        <TextBlock Text="{Binding AddDate}" TextWrapping="NoWrap" 
+                            <TextBlock Text="{Binding AddDate}" TextWrapping="NoWrap" 
                            Style="{StaticResource BasicTextStyle}" />
-                    </StackPanel>
+                        </StackPanel>
+                    </Button>
                 </DataTemplate>
             </GridView.ItemTemplate>
 

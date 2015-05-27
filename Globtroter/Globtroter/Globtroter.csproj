@@ -122,8 +122,8 @@
     <Compile Include="ViewModel\artist.xaml.cs">
       <DependentUpon>artist.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\GalleryDescribe.xaml.cs">
-      <DependentUpon>GalleryDescribe.xaml</DependentUpon>
+    <Compile Include="ViewModel\GalleryFoto.xaml.cs">
+      <DependentUpon>GalleryFoto.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\GalleryGroups.xaml.cs">
       <DependentUpon>GalleryGroups.xaml</DependentUpon>
@@ -169,7 +169,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewModel\GalleryDescribe.xaml">
+    <Page Include="ViewModel\GalleryFoto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

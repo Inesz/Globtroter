@@ -118,24 +118,25 @@ namespace Globtroter.Globtroter_XamlTypeInfo
 
         private object Activate_2_SearchResultsPage1() { return new global::Globtroter.SearchResultsPage1(); }
 
-        private object Activate_3_Dictionary() { return new global::System.Collections.Generic.Dictionary<global::System.String, System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>>(); }
+        private object Activate_3_List() { return new global::System.Collections.Generic.List<global::Globtroter.DataModel.Subgroups>(); }
 
-        private object Activate_5_artist() { return new global::Globtroter.ViewModel.artist(); }
+        private object Activate_4_Subgroups() { return new global::Globtroter.DataModel.Subgroups(); }
 
-        private object Activate_6_GalleryDescribe() { return new global::Globtroter.ViewModel.GalleryDescribe(); }
+        private object Activate_7_artist() { return new global::Globtroter.ViewModel.artist(); }
 
-        private object Activate_7_GalleryGroups() { return new global::Globtroter.ViewModel.GalleryGroups(); }
+        private object Activate_8_GalleryFoto() { return new global::Globtroter.ViewModel.GalleryFoto(); }
 
-        private object Activate_8_MainPage() { return new global::Globtroter.MainPage(); }
+        private object Activate_9_GalleryGroups() { return new global::Globtroter.ViewModel.GalleryGroups(); }
 
-        private object Activate_9_SaveFoto() { return new global::Globtroter.ViewModel.SaveFoto(); }
+        private object Activate_10_MainPage() { return new global::Globtroter.MainPage(); }
 
-        private void MapAdd_3_Dictionary(object instance, object key, object item)
+        private object Activate_11_SaveFoto() { return new global::Globtroter.ViewModel.SaveFoto(); }
+
+        private void VectorAdd_3_List(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>>)instance;
-            var newKey = (global::System.String)key;
-            var newItem = (global::System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>)item;
-            collection.Add(newKey, newItem);
+            var collection = (global::System.Collections.Generic.ICollection<global::Globtroter.DataModel.Subgroups>)instance;
+            var newItem = (global::Globtroter.DataModel.Subgroups)item;
+            collection.Add(newItem);
         }
 
 
@@ -177,55 +178,77 @@ namespace Globtroter.Globtroter_XamlTypeInfo
             case "Globtroter.SearchResultsPage1":
                 userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.SearchResultsPage1), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
                 userType.Activator = Activate_2_SearchResultsPage1;
-                userType.AddMemberName("AllResultsCollection");
-                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.Dictionary<global::System.String, System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>>),
-                                                   "System.Collections.Generic.Dictionary<String, System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataItem>>");
+                userType.AddMemberName("results");
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.List<global::Globtroter.DataModel.Subgroups>),
+                                                   "System.Collections.Generic.List<Globtroter.DataModel.Subgroups>");
                 xamlType = userType;
                 break;
 
-            case "System.Collections.Generic.Dictionary<String, System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataItem>>":
-                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Collections.Generic.Dictionary<global::System.String, System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>>), GetXamlTypeByName("Object"));
-                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.Dictionary<global::System.String, System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>>),
-                                                   "System.Collections.Generic.Dictionary<String, System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataItem>>");
-                userType.Activator = Activate_3_Dictionary;
-                userType.DictionaryAdd = MapAdd_3_Dictionary;
+            case "System.Collections.Generic.List<Globtroter.DataModel.Subgroups>":
+                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Collections.Generic.List<global::Globtroter.DataModel.Subgroups>), GetXamlTypeByName("Object"));
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.List<global::Globtroter.DataModel.Subgroups>),
+                                                   "System.Collections.Generic.List<Globtroter.DataModel.Subgroups>");
+                userType.Activator = Activate_3_List;
+                userType.CollectionAdd = VectorAdd_3_List;
                 xamlType = userType;
                 break;
 
-            case "System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataItem>":
-                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>), null);
-                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>),
-                                                   "System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataItem>");
+            case "Globtroter.DataModel.Subgroups":
+                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.DataModel.Subgroups), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_Subgroups;
+                userType.AddMemberName("Group");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("Description");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("Name");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("AddDate");
+                userType.AddMemberName("Id");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                xamlType = userType;
+                break;
+
+            case "System.DateTime":
+                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.DateTime), GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case "System.ValueType":
+                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.ValueType), GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
             case "Globtroter.ViewModel.artist":
                 userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.artist), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_artist;
+                userType.Activator = Activate_7_artist;
                 xamlType = userType;
                 break;
 
-            case "Globtroter.ViewModel.GalleryDescribe":
-                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.GalleryDescribe), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
-                userType.Activator = Activate_6_GalleryDescribe;
+            case "Globtroter.ViewModel.GalleryFoto":
+                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.GalleryFoto), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
+                userType.Activator = Activate_8_GalleryFoto;
                 xamlType = userType;
                 break;
 
             case "Globtroter.ViewModel.GalleryGroups":
                 userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.GalleryGroups), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
-                userType.Activator = Activate_7_GalleryGroups;
+                userType.Activator = Activate_9_GalleryGroups;
                 xamlType = userType;
                 break;
 
             case "Globtroter.MainPage":
                 userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_MainPage;
+                userType.Activator = Activate_10_MainPage;
                 xamlType = userType;
                 break;
 
             case "Globtroter.ViewModel.SaveFoto":
                 userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.SaveFoto), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
-                userType.Activator = Activate_9_SaveFoto;
+                userType.Activator = Activate_11_SaveFoto;
                 xamlType = userType;
                 break;
 
@@ -234,15 +257,65 @@ namespace Globtroter.Globtroter_XamlTypeInfo
         }
 
 
-        private object get_0_SearchResultsPage1_AllResultsCollection(object instance)
+        private object get_0_SearchResultsPage1_results(object instance)
         {
             var that = (global::Globtroter.SearchResultsPage1)instance;
-            return that.AllResultsCollection;
+            return that.results;
         }
-        private void set_0_SearchResultsPage1_AllResultsCollection(object instance, object Value)
+        private void set_0_SearchResultsPage1_results(object instance, object Value)
         {
             var that = (global::Globtroter.SearchResultsPage1)instance;
-            that.AllResultsCollection = (global::System.Collections.Generic.Dictionary<global::System.String, System.Collections.Generic.IEnumerable<global::Globtroter.Data.SampleDataItem>>)Value;
+            that.results = (global::System.Collections.Generic.List<global::Globtroter.DataModel.Subgroups>)Value;
+        }
+        private object get_1_Subgroups_Group(object instance)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            return that.Group;
+        }
+        private void set_1_Subgroups_Group(object instance, object Value)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            that.Group = (global::System.String)Value;
+        }
+        private object get_2_Subgroups_Description(object instance)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            return that.Description;
+        }
+        private void set_2_Subgroups_Description(object instance, object Value)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            that.Description = (global::System.String)Value;
+        }
+        private object get_3_Subgroups_Name(object instance)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            return that.Name;
+        }
+        private void set_3_Subgroups_Name(object instance, object Value)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_4_Subgroups_AddDate(object instance)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            return that.AddDate;
+        }
+        private void set_4_Subgroups_AddDate(object instance, object Value)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            that.AddDate = (global::System.DateTime)Value;
+        }
+        private object get_5_Subgroups_Id(object instance)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            return that.Id;
+        }
+        private void set_5_Subgroups_Id(object instance, object Value)
+        {
+            var that = (global::Globtroter.DataModel.Subgroups)instance;
+            that.Id = (global::System.String)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -252,11 +325,41 @@ namespace Globtroter.Globtroter_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "Globtroter.SearchResultsPage1.AllResultsCollection":
+            case "Globtroter.SearchResultsPage1.results":
                 userType = (global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Globtroter.SearchResultsPage1");
-                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "AllResultsCollection", "System.Collections.Generic.Dictionary<String, System.Collections.Generic.IEnumerable<Globtroter.Data.SampleDataItem>>");
-                xamlMember.Getter = get_0_SearchResultsPage1_AllResultsCollection;
-                xamlMember.Setter = set_0_SearchResultsPage1_AllResultsCollection;
+                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "results", "System.Collections.Generic.List<Globtroter.DataModel.Subgroups>");
+                xamlMember.Getter = get_0_SearchResultsPage1_results;
+                xamlMember.Setter = set_0_SearchResultsPage1_results;
+                break;
+            case "Globtroter.DataModel.Subgroups.Group":
+                userType = (global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Globtroter.DataModel.Subgroups");
+                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "Group", "String");
+                xamlMember.Getter = get_1_Subgroups_Group;
+                xamlMember.Setter = set_1_Subgroups_Group;
+                break;
+            case "Globtroter.DataModel.Subgroups.Description":
+                userType = (global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Globtroter.DataModel.Subgroups");
+                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "Description", "String");
+                xamlMember.Getter = get_2_Subgroups_Description;
+                xamlMember.Setter = set_2_Subgroups_Description;
+                break;
+            case "Globtroter.DataModel.Subgroups.Name":
+                userType = (global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Globtroter.DataModel.Subgroups");
+                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_3_Subgroups_Name;
+                xamlMember.Setter = set_3_Subgroups_Name;
+                break;
+            case "Globtroter.DataModel.Subgroups.AddDate":
+                userType = (global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Globtroter.DataModel.Subgroups");
+                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "AddDate", "System.DateTime");
+                xamlMember.Getter = get_4_Subgroups_AddDate;
+                xamlMember.Setter = set_4_Subgroups_AddDate;
+                break;
+            case "Globtroter.DataModel.Subgroups.Id":
+                userType = (global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Globtroter.DataModel.Subgroups");
+                xamlMember = new global::Globtroter.Globtroter_XamlTypeInfo.XamlMember(this, "Id", "String");
+                xamlMember.Getter = get_5_Subgroups_Id;
+                xamlMember.Setter = set_5_Subgroups_Id;
                 break;
             }
             return xamlMember;

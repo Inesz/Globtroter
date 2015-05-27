@@ -67,8 +67,8 @@
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\artist.xaml">
       <PackagePath>ViewModel\artist.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryDescribe.xaml">
-      <PackagePath>ViewModel\GalleryDescribe.xaml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryFoto.xaml">
+      <PackagePath>ViewModel\GalleryFoto.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryGroups.xaml">
       <PackagePath>ViewModel\GalleryGroups.xaml</PackagePath>

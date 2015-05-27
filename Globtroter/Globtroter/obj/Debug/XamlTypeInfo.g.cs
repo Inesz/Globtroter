@@ -124,7 +124,7 @@ namespace Globtroter.Globtroter_XamlTypeInfo
 
         private object Activate_7_artist() { return new global::Globtroter.ViewModel.artist(); }
 
-        private object Activate_8_GalleryDescribe() { return new global::Globtroter.ViewModel.GalleryDescribe(); }
+        private object Activate_8_GalleryFoto() { return new global::Globtroter.ViewModel.GalleryFoto(); }
 
         private object Activate_9_GalleryGroups() { return new global::Globtroter.ViewModel.GalleryGroups(); }
 
@@ -228,9 +228,9 @@ namespace Globtroter.Globtroter_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case "Globtroter.ViewModel.GalleryDescribe":
-                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.GalleryDescribe), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
-                userType.Activator = Activate_8_GalleryDescribe;
+            case "Globtroter.ViewModel.GalleryFoto":
+                userType = new global::Globtroter.Globtroter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Globtroter.ViewModel.GalleryFoto), GetXamlTypeByName("Globtroter.Common.LayoutAwarePage"));
+                userType.Activator = Activate_8_GalleryFoto;
                 xamlType = userType;
                 break;
 

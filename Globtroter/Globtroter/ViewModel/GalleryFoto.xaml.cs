@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Windows.Foundation;
@@ -12,17 +13,17 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Group Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234229
+// The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
 
 namespace Globtroter.ViewModel
 {
     /// <summary>
-    /// A page that displays an overview of a single group, including a preview of the items
-    /// within the group.
+    /// A page that displays a collection of item previews.  In the Split Application this page
+    /// is used to display and select one of the available groups.
     /// </summary>
-    public sealed partial class GalleryDescribe : Globtroter.Common.LayoutAwarePage
+    public sealed partial class GalleryFoto : Globtroter.Common.LayoutAwarePage
     {
-        public GalleryDescribe()
+        public GalleryFoto()
         {
             this.InitializeComponent();
         }
@@ -38,8 +39,14 @@ namespace Globtroter.ViewModel
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            // TODO: Assign a bindable group to this.DefaultViewModel["Group"]
-            // TODO: Assign a collection of bindable items to this.DefaultViewModel["Items"]
+            // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
+
+            //odbieranie wartości przekazanych do funkcji
+            string name = navigationParameter as string;
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                Debug.WriteLine("   Podgrupa:" + name);
+            }
         }
     }
 }

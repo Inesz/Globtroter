@@ -9,7 +9,7 @@ App.xaml
 Common\StandardStyles.xaml
 SearchResultsPage1.xaml
 ViewModel\artist.xaml
-ViewModel\GalleryDescribe.xaml
+ViewModel\GalleryFoto.xaml
 ViewModel\GalleryGroups.xaml
 ViewModel\MainPage.xaml
 ViewModel\SaveFoto.xaml

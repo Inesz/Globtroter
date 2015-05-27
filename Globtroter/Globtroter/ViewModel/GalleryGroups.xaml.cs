@@ -1,6 +1,7 @@
 ﻿using Globtroter.DataModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Windows.Foundation;
@@ -41,26 +42,20 @@ namespace Globtroter.ViewModel
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
             App myApp = Application.Current as App;
-            /*
-            SubgroupsOfGroup a = new SubgroupsOfGroup("Ania");
-            SubgroupsOfGroup b = new SubgroupsOfGroup("Kasia");
-            SubgroupsOfGroup c = new SubgroupsOfGroup("Tomek");
-
-            List<Subgroups> Subgroups = new List<Subgroups>();
-            Subgroups d = new Subgroups(); d.Name = "asas";
-            Subgroups e = new Subgroups(); e.Name = "ololol";
-            Subgroups.Add(d);
-            Subgroups.Add(e);
-            a.Subgroups = Subgroups;
-
-            myApp.SubgroupsOfGroup.Add(a);
-            myApp.SubgroupsOfGroup.Add(b);
-            myApp.SubgroupsOfGroup.Add(c);
-            */
-
-            
-
             DefaultViewModel["Items"] = myApp.Subgroups;
+        }
+
+
+        public void OnButtonClick_Subgroup(object sender, RoutedEventArgs e)
+        {
+            //pobierz wartośc tag z aktualnego guziczka
+            FrameworkElement eSource = e.OriginalSource as FrameworkElement;
+            string subgroup = eSource.Tag.ToString();
+
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(GalleryFoto), subgroup);
+            }
         }
     }
 }
