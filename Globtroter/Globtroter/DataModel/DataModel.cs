@@ -93,6 +93,13 @@ namespace Globtroter.DataModel
         public WriteableBitmap _currentFoto { get; set; }
     }
 
+    public class AllFotos
+    {
+        public AllFotos() { }
+
+        public string Name { get; set; }
+        public BitmapImage CurrentFoto { get; set; }
+    }
 
     public class SubgroupsOfGroup
     {

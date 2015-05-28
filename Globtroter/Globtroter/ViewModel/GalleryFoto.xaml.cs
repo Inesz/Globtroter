@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Globtroter.DataModel;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -65,12 +66,20 @@ namespace Globtroter.ViewModel
         {         
             string FolderPath = @"Globtroter\" + name;
             
-            StorageFolder CurrentFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync(FolderPath);
-            
+            StorageFolder CurrentFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync(FolderPath);    
             IReadOnlyList<StorageFile> storageFiles = await CurrentFolder.GetFilesAsync();
 
+            /**/
+            //Grid displayGrid = new Grid();
+            //itemGridView. = displayGrid;
+            /**/
+
+            List<AllFotos> AllFotos = new List<AllFotos>();
+                      
              foreach (StorageFile file in storageFiles)
              {
+                 Debug.WriteLine(file.Name);
+
                      // Open a stream for the selected file.
                      Windows.Storage.Streams.IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
 
@@ -78,10 +87,57 @@ namespace Globtroter.ViewModel
                      Windows.UI.Xaml.Media.Imaging.BitmapImage bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
 
                      bitmapImage.SetSource(fileStream);
-                     myImage.Source = bitmapImage;
-                     this.DataContext = file;             
+
+                     AllFotos currentFoto = new AllFotos();
+                     currentFoto.Name = file.Name;
+                     currentFoto.CurrentFoto = bitmapImage;
+                     AllFotos.Add(currentFoto);
              }
+
+             DefaultViewModel["Items"] = AllFotos;
         }
+
+        private void OnButtonClick_SaveFoto(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+  ////////////////////
+        /*
+                    //ustawienie zawartości pola xaml widoku z poziomu kontrolera
+                    myImage.Source = bitmapImage;
+                    this.DataContext = file; 
+         
+         //dodanie elementu xaml z poziomu kontrolera 
+         Image image = new Image
+           {
+               Source = bitmapImage,
+               Stretch = Stretch.None,
+               Name = file.Name
+           };
+
+         Foto.Children.Add(image);
+        */
+        ///////////////////////
+        
+
+        /*
+         * Grid displayGrid = new Grid();
+            folderItem.DisplayGrid = displayGrid;
+         * 
+         if (bitmap == null)
+                    continue;
+
+                // Tworzenie elementu Image do wyświetlenia miniatury
+                Image image = new Image
+                    {
+                        Source = bitmap,
+                        Stretch = Stretch.None,
+                        Tag = ImageType.Thumbnail
+                    };
+         
+         displayGrid.Children.Add(manipulableControl);
+         * /
         /*
                 StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
                     IReadOnlyList<StorageFolder> storageFolders = await appFolder.GetFoldersAsync();

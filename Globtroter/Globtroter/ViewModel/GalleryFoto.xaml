@@ -28,11 +28,9 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Image Name="myImage" Source=""/>
-        
-        <!-- Horizontal scrolling grid used in most view states -->
-        <GridView
+       
+            <!-- Horizontal scrolling grid used in most view states -->
+            <GridView
             x:Name="itemGridView"
             AutomationProperties.AutomationId="ItemsGridView"
             AutomationProperties.Name="Items"
@@ -40,10 +38,24 @@
             Grid.RowSpan="2"
             Padding="116,136,116,46"
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-            ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
+            
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false">
 
+                <!--ItemTemplate="{StaticResource Standard250x250ItemTemplate}" -->
+
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Click="OnButtonClick_SaveFoto"
+                                Tag="{Binding Name}">
+                            <StackPanel Margin="5">
+                                <Image Source="{Binding CurrentFoto}" Height="140" />
+                            </StackPanel>
+                        </Button>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+            
         <!-- Vertical scrolling list only used when snapped -->
         <ListView
             x:Name="itemListView"

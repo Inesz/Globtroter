@@ -16,25 +16,25 @@
     <AppXManifest Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-05-27T18:35:53.377</Modified>
+      <Modified>2015-05-28T15:10:35.376</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
       <PackagePath>Globtroter.exe</PackagePath>
-      <Modified>2015-05-28T13:35:27.777</Modified>
+      <Modified>2015-05-28T15:24:52.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
       <PackagePath>Globtroter.pdb</PackagePath>
-      <Modified>2015-05-28T13:35:27.472</Modified>
+      <Modified>2015-05-28T15:24:52.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
       <PackagePath>BackgroundTasks.pdb</PackagePath>
-      <Modified>2015-05-27T18:35:32.853</Modified>
+      <Modified>2015-05-28T15:10:09.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.winmd">
       <PackagePath>BackgroundTasks.winmd</PackagePath>
-      <Modified>2015-05-27T18:35:33.416</Modified>
+      <Modified>2015-05-28T15:10:09.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -92,7 +92,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryFoto.xaml">
       <PackagePath>ViewModel\GalleryFoto.xaml</PackagePath>
-      <Modified>2015-05-28T13:35:10.724</Modified>
+      <Modified>2015-05-28T15:22:30.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryGroups.xaml">
       <PackagePath>ViewModel\GalleryGroups.xaml</PackagePath>
@@ -108,7 +108,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Globtroter\Globtroter\Globtroter\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-05-27T18:35:48.469</Modified>
+      <Modified>2015-05-28T15:10:25.618</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
