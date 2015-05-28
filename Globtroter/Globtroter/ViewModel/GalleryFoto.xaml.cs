@@ -45,6 +45,8 @@ namespace Globtroter.ViewModel
         /// </param>
         /// <param name="pageState">A dictionary of state preserved by this page during an earlier
         /// session.  This will be null the first time a page is visited.</param>
+        private string Subgroup = "";
+
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
@@ -53,6 +55,7 @@ namespace Globtroter.ViewModel
             string name = navigationParameter as string;
             if (!string.IsNullOrWhiteSpace(name))
             {
+                Subgroup = name;
                 Debug.WriteLine("   Podgrupa:" + name);
             }
 
@@ -97,10 +100,50 @@ namespace Globtroter.ViewModel
              DefaultViewModel["Items"] = AllFotos;
         }
 
-        private void OnButtonClick_SaveFoto(object sender, RoutedEventArgs e)
+        private async void OnButtonClick_SaveFoto(object sender, RoutedEventArgs e)
         {
+            FrameworkElement eSource = e.OriginalSource as FrameworkElement;
+            string Name = eSource.Tag.ToString();
 
+            App myApp = Application.Current as App;
+
+            //Aktualizuj current foto
+            foreach (Fotos foto in myApp.Fotos)
+            {
+                if (foto.Name == Name)
+                {
+                    myApp._currentFoto.AddDate = foto.AddDate;
+                    myApp._currentFoto.Description = foto.Description;
+                    myApp._currentFoto.Group = "";
+                    myApp._currentFoto.Id = foto.Id;
+                    myApp._currentFoto.Localization = foto.Lozalization;             
+                }
+            }           
+            myApp._currentFoto._currentFoto = await PobierzBitmapImage(Subgroup, Name);
+            myApp._currentFoto.Name = Subgroup;
+            myApp._currentFoto.Name = Name;
+            
+            
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(SaveFoto));
+            }          
         }
+
+        async Task<BitmapImage> PobierzBitmapImage(string path, string name)
+        {
+            string FolderPath = @"Globtroter\" + path;
+
+            StorageFolder CurrentFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync(FolderPath);
+            StorageFile file = await CurrentFolder.GetFileAsync(name);
+
+            Windows.Storage.Streams.IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            Windows.UI.Xaml.Media.Imaging.BitmapImage bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+            bitmapImage.SetSource(fileStream);
+
+            return bitmapImage;
+        }
+
 
   ////////////////////
         /*
@@ -119,119 +162,5 @@ namespace Globtroter.ViewModel
          Foto.Children.Add(image);
         */
         ///////////////////////
-        
-
-        /*
-         * Grid displayGrid = new Grid();
-            folderItem.DisplayGrid = displayGrid;
-         * 
-         if (bitmap == null)
-                    continue;
-
-                // Tworzenie elementu Image do wyświetlenia miniatury
-                Image image = new Image
-                    {
-                        Source = bitmap,
-                        Stretch = Stretch.None,
-                        Tag = ImageType.Thumbnail
-                    };
-         
-         displayGrid.Children.Add(manipulableControl);
-         * /
-        /*
-                StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
-                    IReadOnlyList<StorageFolder> storageFolders = await appFolder.GetFoldersAsync();
-
-                    Subgroups b = new Subgroups();
-                    b.Name = "hh";
-                    b.Group = "Sopot";
-                    myApp.Subgroups.Add(b);
-
-                    foreach (StorageFolder storageFolder in storageFolders)
-                    {
-                        Subgroups c = new Subgroups();
-                        c.Name = storageFolder.Name;
-                        c.Group = "Ania";
-                        //myApp.Subgroups.Add(c);
-                        Subgroups.Add(c);
-                        Debug.WriteLine("   mam:"+storageFolder.Name);
-                    }
-         * 
-         * if (file != null)
-                        {
-                            // Open a stream for the selected file.
-                            Windows.Storage.Streams.IRandomAccessStream fileStream =
-                                await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-
-                            // Set the image source to the selected bitmap.
-                            Windows.UI.Xaml.Media.Imaging.BitmapImage bitmapImage =
-                                new Windows.UI.Xaml.Media.Imaging.BitmapImage();
-
-                            bitmapImage.SetSource(fileStream);
-                            myImage.Source = bitmapImage;
-                            this.DataContext = file;
-
-                        }
-        */
-        /*
-        async Task<BitmapSource> LoadBitmapAsync(StorageFile storageFile)
-        {
-            BitmapSource bitmapSource = null;
-            // Otwarcie StorageFile do odczytu
-            using (IRandomAccessStreamWithContentType stream = await storageFile.OpenReadAsync())
-            {
-                bitmapSource = await LoadBitmapAsync(stream);
-            }
-            return bitmapSource;
-        }
-
-        async Task<BitmapSource> LoadBitmapAsync(StorageItemThumbnail thumbnail)
-        {
-            return await LoadBitmapAsync(thumbnail as IRandomAccessStream);
-        }
-
-        async Task<BitmapSource> LoadBitmapAsync(IRandomAccessStream stream)
-        {
-            WriteableBitmap bitmap = null;
-
-            // Tworzenie BitmapDecoder ze strumienia
-            BitmapDecoder decoder = null;
-
-            try
-            {
-                decoder = await BitmapDecoder.CreateAsync(stream);
-            }
-            catch
-            {
-                // Po porstu pomiń nieprawidłowe
-                return null;
-            }
-
-            // Pobranie pierwszej ramki
-            BitmapFrame bitmapFrame = await decoder.GetFrameAsync(0);
-
-            // Pobranie pikseli
-            PixelDataProvider dataProvider =
-                    await bitmapFrame.GetPixelDataAsync(BitmapPixelFormat.Bgra8,
-                                                        BitmapAlphaMode.Premultiplied,
-                                                        new BitmapTransform(),
-                                                        ExifOrientationMode.RespectExifOrientation,
-                                                        ColorManagementMode.ColorManageToSRgb);
-
-            byte[] pixels = dataProvider.DetachPixelData();
-
-            // Tworzenie WriteableBitmap i ustawienie pikseli
-            bitmap = new WriteableBitmap((int)bitmapFrame.PixelWidth,
-                                            (int)bitmapFrame.PixelHeight);
-
-            using (Stream pixelStream = bitmap.PixelBuffer.AsStream())
-            {
-                pixelStream.Write(pixels, 0, pixels.Length);
-            }
-
-            bitmap.Invalidate();
-            return bitmap;
-        }
-        */
     }
 }

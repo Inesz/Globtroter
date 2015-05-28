@@ -30,3 +30,15 @@ C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\obj\Debug\priconfig.xml.inte
 C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\obj\Debug\layout.resfiles.intermediate
 C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\obj\Debug\resources.resfiles.intermediate
 C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\obj\Debug\pri.resfiles.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.winmd
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pri
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.winmd
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.pdb
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.winmdobj
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\BackgroundTasks.compile.pdb
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\priconfig.xml
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\layout.resfiles
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\resources.resfiles
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\pri.resfiles
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\LanguageQualifiers.txt

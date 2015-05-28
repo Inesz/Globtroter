@@ -54,10 +54,7 @@ namespace Globtroter.ViewModel
             IEnumerable<string> p = myApp.Subgroups.Select(Subgroups => Subgroups.Name);
             Subgroup.DataContext = p; //myApp.Subgroups.SelectMany(p => p.Name); //SelectMany(myApp.Subgroups => Name);
 
-            //foreach (Subgroups s in myApp._currentFoto.Subgroup)
-            {
-
-            }
+           
             Subgroup.SelectedItem = myApp._currentFoto.Subgroup;
         }
 

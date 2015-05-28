@@ -90,7 +90,8 @@ namespace Globtroter.DataModel
         public DateTime AddDate { get; set; }
         public string Localization { get; set; }
         public string Id { get; set; } // { this.id = this.AddDate.ToString(); } }
-        public WriteableBitmap _currentFoto { get; set; }
+        //public WriteableBitmap _currentFoto { get; set; }
+        public BitmapImage _currentFoto { get; set; }
     }
 
     public class AllFotos

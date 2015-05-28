@@ -32,9 +32,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.Web.Syndication;
 
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Globtroter
 {
     /// <summary>
@@ -80,7 +77,7 @@ namespace Globtroter
                     await ProcessStorageItems();
                 }
                 else _shareOperation.ReportError(
-                    "Aplikacja Image Helper nie znalazła prawidłowej mapy bitowej.");
+                    "Aplikacja nie znalazła prawidłowej mapy bitowej.");
             }
         }
 
@@ -172,7 +169,7 @@ namespace Globtroter
                 var savedFile = await picker.PickSaveFileAsync();
 
                 //zapis do globalnego pola 
-                UpdateCurrentFoto(savedFile, _writeableBitmap);
+              
 
                 try
                 {
@@ -209,7 +206,7 @@ namespace Globtroter
                 finally
                 {
                     CheckAndClearShareOperation();
-
+                    UpdateCurrentFoto(savedFile, _writeableBitmap);
                     if (this.Frame != null)
                     {
                         this.Frame.Navigate(typeof(SaveFoto));
@@ -218,11 +215,11 @@ namespace Globtroter
             }
         }
 
-        public void UpdateCurrentFoto(StorageFile savedFile, WriteableBitmap writableBitmap)
+        public async void UpdateCurrentFoto(StorageFile savedFile, WriteableBitmap writableBitmap)
         {
             App myApp = Application.Current as App;
 
-            myApp._currentFoto._currentFoto = writableBitmap;
+            //myApp._currentFoto._currentFoto = writableBitmap;
             myApp._currentFoto.AddDate = savedFile.DateCreated.DateTime;
             myApp._currentFoto.Name = savedFile.Name;
             myApp._currentFoto.Description = "";
@@ -243,26 +240,34 @@ namespace Globtroter
                 }
             }
             
+            myApp._currentFoto._currentFoto = await GetImageBitmap(myApp._currentFoto.Subgroup, myApp._currentFoto.Id);
+        }
 
+        public async Task<BitmapImage> GetImageBitmap(string path,string name)
+        {
+
+            string FolderPath = @"Globtroter\" + path;
+
+            StorageFolder CurrentFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync(FolderPath);
+            StorageFile file = await CurrentFolder.GetFileAsync(name);
+
+            Windows.Storage.Streams.IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            Windows.UI.Xaml.Media.Imaging.BitmapImage bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+            bitmapImage.SetSource(fileStream);
+
+            return bitmapImage;
         }
 
         public void OnButtonClick_Gallery(object sender, RoutedEventArgs e)
-        {
-           // Geoposition pos = await _geolocator.GetGeopositionAsync().AsTask(token);
-            //ScenarioOutput_Latitude.Text = ;
-      
+        {  
             if (this.Frame != null)
             {
                 this.Frame.Navigate(typeof(GalleryGroups), "AllGroups");
             }
-
         }
 
         public void OnButtonClick_Artist(object sender, RoutedEventArgs e)
         {
-           // Geoposition pos = await _geolocator.GetGeopositionAsync().AsTask(token);
-            //ScenarioOutput_Latitude.Text = ;
-      
             if (this.Frame != null)
             {
                 this.Frame.Navigate(typeof(artist));
@@ -272,7 +277,6 @@ namespace Globtroter
 
         public async void cerateFolder(string folderName)
         {
-
             StorageFolder libraryFolder = Windows.Storage.KnownFolders.PicturesLibrary;
 
             try
@@ -280,7 +284,6 @@ namespace Globtroter
                 await libraryFolder.CreateFolderAsync(folderName, CreationCollisionOption.FailIfExists);
             }
             catch { }
-
         }
 
         public async void initialize()

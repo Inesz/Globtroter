@@ -1,2 +1,2 @@
-C:\Users\agua\Globtroter\Globtroter\BackgroundTasks\BackgroundTasks.csproj;neutral
-C:\Users\agua\Globtroter\Globtroter\Globtroter\Globtroter.csproj;neutral
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\BackgroundTasks.csproj;neutral
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\Globtroter.csproj;neutral

@@ -28,8 +28,12 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-       
-            <!-- Horizontal scrolling grid used in most view states -->
+
+        <StackPanel Margin="5">
+            <Image Name="aaa" Source="" Height="140" Width="140"/>
+        </StackPanel>
+
+        <!-- Horizontal scrolling grid used in most view states -->
             <GridView
             x:Name="itemGridView"
             AutomationProperties.AutomationId="ItemsGridView"
@@ -50,7 +54,7 @@
                                 Tag="{Binding Name}">
                             <StackPanel Margin="5">
                                 <Image Source="{Binding CurrentFoto}" Height="140" />
-                            </StackPanel>
+                        </StackPanel>
                         </Button>
                     </DataTemplate>
                 </GridView.ItemTemplate>

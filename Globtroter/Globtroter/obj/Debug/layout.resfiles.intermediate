@@ -1,0 +1,16 @@
+Assets\Logo.png
+Assets\logo128.jpg
+Assets\logo24.jpg
+Assets\Logo310x150.jpg
+Assets\SmallLogo.png
+Assets\SplashScreen.png
+Assets\StoreLogo.png
+App.xaml
+Common\StandardStyles.xaml
+SearchResultsPage1.xaml
+ViewModel\artist.xaml
+ViewModel\GalleryFoto.xaml
+ViewModel\GalleryGroups.xaml
+ViewModel\MainPage.xaml
+ViewModel\SaveFoto.xaml
+Common\ReadMe.txt
