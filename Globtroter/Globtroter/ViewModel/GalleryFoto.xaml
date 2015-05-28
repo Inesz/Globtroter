@@ -15,10 +15,7 @@
         <!-- Collection of items displayed by this page -->
         <CollectionViewSource
             x:Name="itemsViewSource"
-            Source="{Binding Items}"/>
-
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+            Source="{Binding Items}"/>    
     </Page.Resources>
 
     <!--
@@ -31,7 +28,9 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+        
+        <Image Name="myImage" Source=""/>
+        
         <!-- Horizontal scrolling grid used in most view states -->
         <GridView
             x:Name="itemGridView"
