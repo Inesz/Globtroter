@@ -66,23 +66,19 @@ namespace Globtroter.ViewModel
 
         //async void OnMainPageLoaded(object sender, RoutedEventArgs args)
         async void OnMainPageLoaded(string name)
-        {         
+        {       
+  
             string FolderPath = @"Globtroter\" + name;
             
             StorageFolder CurrentFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync(FolderPath);    
             IReadOnlyList<StorageFile> storageFiles = await CurrentFolder.GetFilesAsync();
 
-            /**/
-            //Grid displayGrid = new Grid();
-            //itemGridView. = displayGrid;
-            /**/
+            Subgroup = name;
 
             List<AllFotos> AllFotos = new List<AllFotos>();
                       
              foreach (StorageFile file in storageFiles)
              {
-                 Debug.WriteLine(file.Name);
-
                      // Open a stream for the selected file.
                      Windows.Storage.Streams.IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
 
