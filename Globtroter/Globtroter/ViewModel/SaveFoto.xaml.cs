@@ -1,4 +1,5 @@
-﻿using Globtroter.DataModel;
+﻿using Globtroter.Common;
+using Globtroter.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -52,9 +53,7 @@ namespace Globtroter.ViewModel
             Group.DataContext = myApp._currentFoto.Group;
 
             IEnumerable<string> p = myApp.Subgroups.Select(Subgroups => Subgroups.Name);
-            Subgroup.DataContext = p; //myApp.Subgroups.SelectMany(p => p.Name); //SelectMany(myApp.Subgroups => Name);
-
-           
+            Subgroup.DataContext = p; 
             Subgroup.SelectedItem = myApp._currentFoto.Subgroup;
         }
 
@@ -74,26 +73,12 @@ namespace Globtroter.ViewModel
             App myApp = Application.Current as App;
             String msg = "zapisano zmiany";
 
+            String name = myApp._currentFoto.Name;
+            String subgroup = myApp._currentFoto.Subgroup;
 
-            Debug.WriteLine("   Name.Text= " + Name.Text + " app=" + myApp._currentFoto.Name);
-            if (Name.Text != myApp._currentFoto.Name)
-            Debug.WriteLine("       rozne");
-            else
-            Debug.WriteLine("       takie same");
-
-            Debug.WriteLine("   Subgroup.SelectedItem=" + Subgroup.SelectedItem + " app=" + myApp._currentFoto.Subgroup);
-
-            if (Subgroup.SelectedItem != myApp._currentFoto.Subgroup)
-                Debug.WriteLine("       rozne");
-            else
-                Debug.WriteLine("       takie same");
-
-
-            if (Name.Text != myApp._currentFoto.Name || Subgroup.SelectedItem != myApp._currentFoto.Subgroup)
-            {    
             StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
-            StorageFolder currentFolder = await appFolder.GetFolderAsync(myApp._currentFoto.Subgroup);
-            StorageFile File = await currentFolder.GetFileAsync(myApp._currentFoto.Name);
+            StorageFolder currentFolder = await appFolder.GetFolderAsync(subgroup);
+            StorageFile File = await currentFolder.GetFileAsync(name);
 
             if (Name.Text != myApp._currentFoto.Name)
             {
@@ -104,39 +89,73 @@ namespace Globtroter.ViewModel
                     }
                     catch
                     {
-                        msg = "Nie udało się zapisać zmian. Plik o podanej nazwie już istnieje";
+                        msg = "Nie udało się zmienić nazwy. Plik o podanej nazwie już istnieje";
                     }
-                }
+            }
 
             if (Subgroup.SelectedItem != myApp._currentFoto.Subgroup)
                 {
                     myApp._currentFoto.Subgroup = Subgroup.SelectedItem.ToString();
-                    StorageFolder updateFolders = await appFolder.GetFolderAsync(Subgroup.SelectedItem.ToString());
+                    StorageFolder updateFolder = await appFolder.GetFolderAsync(Subgroup.SelectedItem.ToString());
                     try
                     {
-                        await File.MoveAsync(updateFolders, myApp._currentFoto.Name, NameCollisionOption.FailIfExists);
+                        await File.MoveAsync(updateFolder, myApp._currentFoto.Name, NameCollisionOption.FailIfExists);
                     }
                     catch
                     {
-                        msg = "Nie udało się zapisać zmian. Plik o podanej nazwie już istnieje";
+                        msg = "Nie udało się przenieść pliku. Plik o podanej nazwie już istnieje";
                     }
                 }               
-            }
+            
   
             myApp._currentFoto.Description = Description.Text;
             myApp._currentFoto.Localization = Localization.Text;
+
+            //aktualizacja wpisu 
+            Fotos f = myApp.Fotos.Find(x => x.Name == name && x.Subgroup == subgroup);
+            f.AddDate = myApp._currentFoto.AddDate;
+            f.Description = myApp._currentFoto.Description;
+            f.Lozalization = myApp._currentFoto.Localization;
+            f.Name = myApp._currentFoto.Name;
+            f.Subgroup = myApp._currentFoto.Subgroup;
+            //serializacja danych
+            string key = "nowy";
+            var IS = new IsolatedStorage<Fotos>();
+            String s = IS.ToXml(myApp.Fotos);
+            IS.SaveInfo(key, s);
 
             Debug.WriteLine(msg);
         }
 
         private void OnButtonClick_CancelChanges(object sender, RoutedEventArgs e)
         {
+            App myApp = Application.Current as App;
 
+            Name.Text = myApp._currentFoto.Name;
+
+           //błąd - pole nie może być puste????
+            //Description.Text = myApp._currentFoto.Description;
+            //Localization.Text = myApp._currentFoto.Localization;
+            Group.Text = "";
+
+            //IEnumerable<string> p = myApp.Subgroups.Select(Subgroups => Subgroups.Name);
+            //Subgroup.DataContext = p;
+            Subgroup.SelectedItem = myApp._currentFoto.Subgroup;
+
+            
         }
 
         private void ComboBoxSubgroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Group.DataContext = "myApp._currentFoto.Group";
+            Group.DataContext = "Zmień grupę";
+        }
+
+        private void OnButtonClick_Home(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(MainPage));
+            }  
         }
     }
 }

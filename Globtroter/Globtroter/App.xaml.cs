@@ -48,17 +48,21 @@ namespace Globtroter
         public Type NavigatedPage { get; set; }
         public SampleDataSource DataSource { get; private set; }
         public SampleDataGroup CurrentGroup { get; set; }
+        
         /****/
 
-        /* publiczny obiekt do reprezentacji aktualnego zdjecia */
+        //zdjecie przygotowane do wyswietlenia w widoku Savefoto
         //public WriteableBitmap _currentFoto;
-        public CurrentFoto _currentFoto = new CurrentFoto();
-        /**/
-        /***/
-        public List<Groups> Groups = new List<Groups>();
+        public CurrentFoto _currentFoto = new CurrentFoto();     
+        //lista katalogów
         public List<Subgroups> Subgroups = new List<Subgroups>();
+        //lista bitmap zdjęć
         public List<Fotos> Fotos = new List<Fotos>();
+        
+        //podkatalogi grup
         public List<SubgroupsOfGroup> SubgroupsOfGroup = new List<SubgroupsOfGroup>();
+        //lista grup
+        public List<Groups> Groups = new List<Groups>();
         /***/
        
         /// <summary>

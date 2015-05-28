@@ -28,6 +28,7 @@
 
                         <Button x:ConnectionId='1'                                   Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
                         <Button x:ConnectionId='2'                                     Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Anuluj"/>
+                        <Button x:ConnectionId='3'                            Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Menu główne"/>
 
                 </StackPanel>
                 </Grid>
@@ -52,7 +53,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='4' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='5' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
@@ -82,7 +83,7 @@
             <TextBox   Grid.Column="1" Grid.Row="0" x:Name="Name"           Text="{Binding}"  HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300"/>
             <TextBlock Grid.Column="1" Grid.Row="1" x:Name="Data"           Text="{Binding}" HorizontalAlignment="Center" TextWrapping="Wrap" />
             <TextBlock Grid.Column="1" Grid.Row="2" x:Name="Group"          Text="{Binding}"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
-            <ComboBox x:ConnectionId='3'  Grid.Column="1" Grid.Row="3" x:Name="Subgroup"       SelectedItem="{Binding}" ItemsSource="{Binding}"                                                      HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
+            <ComboBox x:ConnectionId='4'  Grid.Column="1" Grid.Row="3" x:Name="Subgroup"       SelectedItem="{Binding}" ItemsSource="{Binding}"                                                      HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
             <TextBox   Grid.Column="1" Grid.Row="4" x:Name="Localization"   Text="{Binding}" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" />
             <TextBox   Grid.Column="1" Grid.Row="5" x:Name="Description"    Text="{Binding}" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
 
