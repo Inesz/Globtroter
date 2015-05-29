@@ -112,14 +112,37 @@ namespace Globtroter.ViewModel
             myApp._currentFoto.Localization = Localization.Text;
 
             //aktualizacja wpisu 
-            Fotos f = myApp.Fotos.Find(x => x.Name == name && x.Subgroup == subgroup);
-            f.AddDate = myApp._currentFoto.AddDate;
+            Debug.WriteLine(myApp._currentFoto.Description + ", " + myApp._currentFoto.Localization + ", " + myApp._currentFoto.Name + ", " + myApp._currentFoto.Subgroup);
+
+            Fotos f = new Fotos();
+            /*
+            if (!String.IsNullOrEmpty(myApp._currentFoto.Description)) f.Description = myApp._currentFoto.Description;
+            if (!String.IsNullOrEmpty(myApp._currentFoto.Localization)) f.Lozalization = myApp._currentFoto.Localization;
+            if (!String.IsNullOrEmpty(myApp._currentFoto.Name)) f.Name = myApp._currentFoto.Name;
+            if (!String.IsNullOrEmpty(myApp._currentFoto.Subgroup)) f.Subgroup = myApp._currentFoto.Subgroup;
+            */
             f.Description = myApp._currentFoto.Description;
             f.Lozalization = myApp._currentFoto.Localization;
             f.Name = myApp._currentFoto.Name;
             f.Subgroup = myApp._currentFoto.Subgroup;
+
+            if (myApp.Fotos.Exists(x => x.Name == name && x.Subgroup == subgroup))
+            {
+                // myApp.Fotos.Find(x => x.Name == name && x.Subgroup == subgroup))
+                for (int i = 0; i < myApp.Fotos.Count; i++)
+                {
+                    if (myApp.Fotos[i].Name == name && myApp.Fotos[i].Subgroup == subgroup)
+                    {
+                        myApp.Fotos[i] = f;
+                    }
+                }
+            }
+            else
+            {
+                myApp.Fotos.Add(f);
+            }
             //serializacja danych
-            string key = "nowy";
+            string key = "Fotos";
             var IS = new IsolatedStorage<Fotos>();
             String s = IS.ToXml(myApp.Fotos);
             IS.SaveInfo(key, s);

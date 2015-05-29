@@ -122,10 +122,6 @@ C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewMo
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\SaveFoto.xaml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.exe
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\Globtroter.pdb
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\priconfig.xml.intermediate
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\layout.resfiles.intermediate
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles.intermediate
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles.intermediate
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\priconfig.xml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\layout.resfiles
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles

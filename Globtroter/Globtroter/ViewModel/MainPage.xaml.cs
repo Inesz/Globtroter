@@ -301,9 +301,20 @@ namespace Globtroter
                 myApp.Subgroups.Add(c);
             }
 
-            string key = "nowy";
+
+            
+            string key = "Fotos";
+            Debug.WriteLine("1");
             var IS = new IsolatedStorage<Fotos>();
-            myApp.Fotos = IS.FromXml(IS.GetInfo(key));
+            Debug.WriteLine("2");
+
+            string pom = IS.GetInfo(key);
+            Debug.WriteLine("3");
+            if(!String.IsNullOrEmpty(pom))
+            myApp.Fotos = IS.FromXml(pom);
+            Debug.WriteLine("4");
+
+             
         }
 
         /*

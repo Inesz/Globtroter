@@ -62,8 +62,6 @@ namespace Globtroter.ViewModel
             OnMainPageLoaded(name);
         }
 
-        /******************************/
-
         //async void OnMainPageLoaded(object sender, RoutedEventArgs args)
         async void OnMainPageLoaded(string name)
         {       
@@ -116,16 +114,16 @@ namespace Globtroter.ViewModel
                 }
             }           
             myApp._currentFoto._currentFoto = await PobierzBitmapImage(Subgroup, Name);
-            myApp._currentFoto.Name = Subgroup;
+            myApp._currentFoto.Subgroup = Subgroup;
+            Debug.WriteLine(Subgroup);
             myApp._currentFoto.Name = Name;
-            
-            
+            myApp._currentFoto.AddDate = addD;
             if (this.Frame != null)
             {
                 this.Frame.Navigate(typeof(SaveFoto));
             }          
         }
-
+        private DateTime addD = new DateTime();
         async Task<BitmapImage> PobierzBitmapImage(string path, string name)
         {
             string FolderPath = @"Globtroter\" + path;
@@ -137,6 +135,8 @@ namespace Globtroter.ViewModel
             Windows.UI.Xaml.Media.Imaging.BitmapImage bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
             bitmapImage.SetSource(fileStream);
 
+            /*!*/
+            addD = file.DateCreated.DateTime;
             return bitmapImage;
         }
 

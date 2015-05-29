@@ -16,25 +16,25 @@
     <AppXManifest Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-05-28T21:03:11.631</Modified>
+      <Modified>2015-05-29T00:23:24.376</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
       <PackagePath>Globtroter.exe</PackagePath>
-      <Modified>2015-05-28T23:41:11.259</Modified>
+      <Modified>2015-05-29T06:49:10.600</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
       <PackagePath>Globtroter.pdb</PackagePath>
-      <Modified>2015-05-28T23:41:10.935</Modified>
+      <Modified>2015-05-29T06:49:10.491</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
       <PackagePath>BackgroundTasks.pdb</PackagePath>
-      <Modified>2015-05-28T18:28:34.039</Modified>
+      <Modified>2015-05-29T00:23:03.960</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.winmd">
       <PackagePath>BackgroundTasks.winmd</PackagePath>
-      <Modified>2015-05-28T18:28:34.070</Modified>
+      <Modified>2015-05-29T00:23:04.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -108,7 +108,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-05-28T18:28:40.775</Modified>
+      <Modified>2015-05-29T00:23:18.543</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

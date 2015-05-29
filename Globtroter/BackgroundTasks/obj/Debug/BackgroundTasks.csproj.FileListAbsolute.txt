@@ -42,3 +42,7 @@ C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\l
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\resources.resfiles
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\pri.resfiles
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\LanguageQualifiers.txt
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\priconfig.xml.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\layout.resfiles.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\resources.resfiles.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\obj\Debug\pri.resfiles.intermediate
