@@ -290,60 +290,20 @@ namespace Globtroter
         {
             App myApp = Application.Current as App;
 
-            List<Groups> Groups = new List<DataModel.Groups>();
-            List<Subgroups> Subgroups = new List<DataModel.Subgroups>();
-
-            //myApp.Groups.Add(new Groups("Ania", "Ania") { });
-            //myApp.Groups.Add(new Groups("Sopot", "Sopot") { });
-            Groups.Add(new Groups("Ania", "Ania") { });
-            Groups.Add(new Groups("Sopot", "Sopot") { });
-
             StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
             IReadOnlyList<StorageFolder> storageFolders = await appFolder.GetFoldersAsync();
-
-            Subgroups b = new Subgroups();
-            b.Name = "hh";
-            b.Group = "Sopot";
-            myApp.Subgroups.Add(b);
 
             foreach (StorageFolder storageFolder in storageFolders)
             {
                 Subgroups c = new Subgroups();
                 c.Name = storageFolder.Name;
-                c.Group = "Ania";
-                //myApp.Subgroups.Add(c);
-                Subgroups.Add(c);
-                Debug.WriteLine("   mam:"+storageFolder.Name);
+                c.AddDate = storageFolder.DateCreated.DateTime;
+                myApp.Subgroups.Add(c);
             }
 
             string key = "nowy";
-            var IS = new IsolatedStorage<Groups>();
-            String s = IS.ToXml(Groups);
-            IS.SaveInfo(key, s);
-            String pom = IS.GetInfo(key);
-            //List<Groups> d = IS.FromXml(pom);
-            myApp.Groups = IS.FromXml(pom);
-
-            var IS2 = new IsolatedStorage<Subgroups>();
-            String s2 = IS2.ToXml(Subgroups);
-            IS2.SaveInfo(key, s2);
-            String pom2 = IS2.GetInfo(key);
-            //List<Groups> d = IS.FromXml(pom);
-            myApp.Subgroups = IS2.FromXml(pom2);
-
-            List<SubgroupsOfGroup> SubgroupsOfGroup = new List<SubgroupsOfGroup>();
-
-            foreach (Groups g in myApp.Groups)
-            {
-                SubgroupsOfGroup sg = new SubgroupsOfGroup(g.Name);
-                foreach (Subgroups ss in myApp.Subgroups)
-                {
-                    if (ss.Group == g.Id)
-                        //sg.Subgroups.Add(ss);
-                        Debug.WriteLine("   mam:"+g.Name + " " + ss.Name);
-                }
-            }
-            myApp.SubgroupsOfGroup = SubgroupsOfGroup;           
+            var IS = new IsolatedStorage<Fotos>();
+            myApp.Fotos = IS.FromXml(IS.GetInfo(key));
         }
 
         /*
@@ -405,7 +365,6 @@ namespace Globtroter
 
         private const string taskName = "BlogFeedBackgroundTask";
         private const string taskEntryPoint = "BackgroundTasks.BlogFeedBackgroundTask";
-
         /**/
     }
 }
