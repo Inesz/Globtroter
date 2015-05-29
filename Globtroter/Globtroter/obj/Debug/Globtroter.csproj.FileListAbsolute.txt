@@ -101,8 +101,6 @@ C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\Common
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\Common\StandardStyles.g.cs
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\SearchResultsPage1.g.i.cs
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\SearchResultsPage1.g.cs
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\artist.g.i.cs
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\artist.g.cs
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryFoto.g.i.cs
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryFoto.g.cs
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryGroups.g.i.cs
@@ -115,7 +113,6 @@ C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\XamlTy
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\App.xaml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\Common\StandardStyles.xaml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\SearchResultsPage1.xaml
-C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\artist.xaml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryFoto.xaml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\GalleryGroups.xaml
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ViewModel\MainPage.xaml
@@ -128,3 +125,7 @@ C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\resour
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\LanguageQualifiers.txt
 C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\ProjectArchitectures.txt
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\priconfig.xml.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\layout.resfiles.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\resources.resfiles.intermediate
+C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\obj\Debug\pri.resfiles.intermediate

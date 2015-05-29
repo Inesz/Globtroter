@@ -64,9 +64,6 @@
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\SearchResultsPage1.xaml">
       <PackagePath>SearchResultsPage1.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\artist.xaml">
-      <PackagePath>ViewModel\artist.xaml</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryFoto.xaml">
       <PackagePath>ViewModel\GalleryFoto.xaml</PackagePath>
     </AppxPackagedFile>

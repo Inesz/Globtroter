@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-05-29T00:23:24.376</Modified>
+      <Modified>2015-05-29T10:17:58.201</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
       <PackagePath>Globtroter.exe</PackagePath>
-      <Modified>2015-05-29T10:08:27.385</Modified>
+      <Modified>2015-05-29T10:24:31.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
       <PackagePath>Globtroter.pdb</PackagePath>
-      <Modified>2015-05-29T10:08:27.178</Modified>
+      <Modified>2015-05-29T10:24:31.312</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
       <PackagePath>BackgroundTasks.pdb</PackagePath>
@@ -86,13 +86,9 @@
       <PackagePath>SearchResultsPage1.xaml</PackagePath>
       <Modified>2015-05-28T18:27:12.263</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\artist.xaml">
-      <PackagePath>ViewModel\artist.xaml</PackagePath>
-      <Modified>2015-05-28T18:27:12.466</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryFoto.xaml">
       <PackagePath>ViewModel\GalleryFoto.xaml</PackagePath>
-      <Modified>2015-05-28T18:55:38.127</Modified>
+      <Modified>2015-05-29T10:23:58.944</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryGroups.xaml">
       <PackagePath>ViewModel\GalleryGroups.xaml</PackagePath>
@@ -100,7 +96,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\MainPage.xaml">
       <PackagePath>ViewModel\MainPage.xaml</PackagePath>
-      <Modified>2015-05-28T18:27:12.404</Modified>
+      <Modified>2015-05-29T10:11:21.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\SaveFoto.xaml">
       <PackagePath>ViewModel\SaveFoto.xaml</PackagePath>
@@ -108,7 +104,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-05-29T00:23:18.543</Modified>
+      <Modified>2015-05-29T10:17:53.739</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

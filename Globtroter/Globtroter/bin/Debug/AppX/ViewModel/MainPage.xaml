@@ -24,8 +24,7 @@
                     <Button x:ConnectionId='1'                              Style="{StaticResource PhotoAppBarButtonStyle}" AutomationProperties.Name="Zrób zdjęcie"/>
                     <Button x:ConnectionId='2'                            Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
                     <Button x:ConnectionId='3'                               Style="{StaticResource PicturesAppBarButtonStyle}" AutomationProperties.Name="Galeria"/>
-                    <Button x:ConnectionId='4'                              Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Grupy"/>
-                    <Button x:ConnectionId='5'                              Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Artist"/>
+                
                 </StackPanel>
             </Grid>
         </AppBar>

@@ -83,6 +83,7 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
+            <Button x:Name="goGalleryGroups" Click="OnButtonClick_GoGalleryGroups" HorizontalAlignment="Right" Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Grupy" Grid.Column="1" Margin="0,38,46,-38"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

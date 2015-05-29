@@ -140,6 +140,14 @@ namespace Globtroter.ViewModel
             return bitmapImage;
         }
 
+        private void OnButtonClick_GoGalleryGroups(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(GalleryGroups));
+            }    
+        }
+
 
   ////////////////////
         /*
