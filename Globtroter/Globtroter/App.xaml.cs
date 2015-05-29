@@ -1,4 +1,5 @@
-﻿using Globtroter.Data;
+﻿using Globtroter.Common;
+using Globtroter.Data;
 using Globtroter.DataModel;
 using System;
 using System.Collections.Generic;
@@ -63,6 +64,33 @@ namespace Globtroter
         public List<SubgroupsOfGroup> SubgroupsOfGroup = new List<SubgroupsOfGroup>();
         //lista grup
         public List<Groups> Groups = new List<Groups>();
+
+        //inicjalizacja danych
+        public async void initialize()
+        {
+            App myApp = Application.Current as App;
+
+            StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
+            IReadOnlyList<StorageFolder> storageFolders = await appFolder.GetFoldersAsync();
+
+            foreach (StorageFolder storageFolder in storageFolders)
+            {
+                Subgroups c = new Subgroups();
+                c.Name = storageFolder.Name;
+                c.AddDate = storageFolder.DateCreated.DateTime;
+                myApp.Subgroups.Add(c);
+            }
+
+
+
+            string key = "Fotos";
+            var IS = new IsolatedStorage<Fotos>();
+
+            string pom = IS.GetInfo(key);
+            if (!String.IsNullOrEmpty(pom))
+                myApp.Fotos = IS.FromXml(pom);
+
+        }
         /***/
        
         /// <summary>
@@ -105,6 +133,7 @@ namespace Globtroter
             Window.Current.Activate();
 
             /**/
+            initialize();
 
         }
 

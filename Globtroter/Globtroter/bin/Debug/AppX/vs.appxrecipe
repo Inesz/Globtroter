@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
       <PackagePath>Globtroter.exe</PackagePath>
-      <Modified>2015-05-29T06:49:10.600</Modified>
+      <Modified>2015-05-29T08:14:21.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
       <PackagePath>Globtroter.pdb</PackagePath>
-      <Modified>2015-05-29T06:49:10.491</Modified>
+      <Modified>2015-05-29T08:14:21.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
       <PackagePath>BackgroundTasks.pdb</PackagePath>

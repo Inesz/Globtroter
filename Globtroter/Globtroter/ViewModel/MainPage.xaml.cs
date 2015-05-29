@@ -57,7 +57,7 @@ namespace Globtroter
         {
             this.RegisterBackgroundTask();
 
-            initialize();
+            //initialize();
 
             var args = e.Parameter as ShareTargetActivatedEventArgs;
             if (args != null)
@@ -286,36 +286,7 @@ namespace Globtroter
             catch { }
         }
 
-        public async void initialize()
-        {
-            App myApp = Application.Current as App;
-
-            StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
-            IReadOnlyList<StorageFolder> storageFolders = await appFolder.GetFoldersAsync();
-
-            foreach (StorageFolder storageFolder in storageFolders)
-            {
-                Subgroups c = new Subgroups();
-                c.Name = storageFolder.Name;
-                c.AddDate = storageFolder.DateCreated.DateTime;
-                myApp.Subgroups.Add(c);
-            }
-
-
-            
-            string key = "Fotos";
-            Debug.WriteLine("1");
-            var IS = new IsolatedStorage<Fotos>();
-            Debug.WriteLine("2");
-
-            string pom = IS.GetInfo(key);
-            Debug.WriteLine("3");
-            if(!String.IsNullOrEmpty(pom))
-            myApp.Fotos = IS.FromXml(pom);
-            Debug.WriteLine("4");
-
-             
-        }
+       
 
         /*
             string mainPath = @"c:\Top-Level Folder";

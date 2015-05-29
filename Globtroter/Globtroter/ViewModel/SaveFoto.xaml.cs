@@ -163,9 +163,7 @@ namespace Globtroter.ViewModel
 
             //IEnumerable<string> p = myApp.Subgroups.Select(Subgroups => Subgroups.Name);
             //Subgroup.DataContext = p;
-            Subgroup.SelectedItem = myApp._currentFoto.Subgroup;
-
-            
+            Subgroup.SelectedItem = myApp._currentFoto.Subgroup;       
         }
 
         private void ComboBoxSubgroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
