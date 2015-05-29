@@ -119,9 +119,6 @@
     <Compile Include="SearchResultsPage1.xaml.cs">
       <DependentUpon>SearchResultsPage1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\artist.xaml.cs">
-      <DependentUpon>artist.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\GalleryFoto.xaml.cs">
       <DependentUpon>GalleryFoto.xaml</DependentUpon>
     </Compile>
@@ -162,10 +159,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="SearchResultsPage1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ViewModel\artist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
