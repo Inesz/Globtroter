@@ -157,8 +157,8 @@ namespace Globtroter.ViewModel
             Name.Text = myApp._currentFoto.Name;
 
            //błąd - pole nie może być puste????
-            //Description.Text = myApp._currentFoto.Description;
-            //Localization.Text = myApp._currentFoto.Localization;
+            Description.Text = myApp._currentFoto.Description;
+            Localization.Text = myApp._currentFoto.Localization;
             Group.Text = "";
 
             //IEnumerable<string> p = myApp.Subgroups.Select(Subgroups => Subgroups.Name);

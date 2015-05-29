@@ -17,8 +17,6 @@
             x:Name="itemsViewSource"
             Source="{Binding Items}"/>
 
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
     </Page.Resources>
 
     <!--
@@ -49,7 +47,7 @@
 
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Button x:ConnectionId='2'                               
+                    <Button x:ConnectionId='3'                               
                             Tag="{Binding Name}"> 
                         <StackPanel Margin="20">
                             <TextBlock Text="{Binding Name}" FontWeight="Bold" 
@@ -100,6 +98,9 @@
             </Grid.ColumnDefinitions>
             <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBox  x:Name="addGroupText" Text=""  HorizontalAlignment="Right" TextWrapping="Wrap"  VerticalAlignment="Center" Width="300" Grid.Column="1" Margin="0,56,166,52" RenderTransformOrigin="1.765,0.082"/>
+
+            <Button x:ConnectionId='2' x:Name="addGroup"                                HorizontalAlignment="Right" Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Dodaj Grupę" Grid.Column="1" Margin="0,38,46,-38"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

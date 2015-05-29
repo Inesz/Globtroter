@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.exe">
       <PackagePath>Globtroter.exe</PackagePath>
-      <Modified>2015-05-29T08:14:21.250</Modified>
+      <Modified>2015-05-29T09:13:05.406</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\Globtroter.pdb">
       <PackagePath>Globtroter.pdb</PackagePath>
-      <Modified>2015-05-29T08:14:21.190</Modified>
+      <Modified>2015-05-29T09:13:05.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\BackgroundTasks\bin\Debug\BackgroundTasks.pdb">
       <PackagePath>BackgroundTasks.pdb</PackagePath>
@@ -96,7 +96,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\GalleryGroups.xaml">
       <PackagePath>ViewModel\GalleryGroups.xaml</PackagePath>
-      <Modified>2015-05-28T18:27:12.373</Modified>
+      <Modified>2015-05-29T09:10:01.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agua\Desktop\Globtr.1\Globtroter\Globtroter\Globtroter\bin\Debug\ViewModel\MainPage.xaml">
       <PackagePath>ViewModel\MainPage.xaml</PackagePath>

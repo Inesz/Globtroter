@@ -1,11 +1,13 @@
 ﻿using Globtroter.DataModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -42,7 +44,7 @@ namespace Globtroter.ViewModel
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
             App myApp = Application.Current as App;
-            DefaultViewModel["Items"] = myApp.Subgroups;
+            DefaultViewModel["Items"] = new ObservableCollection<Subgroups>(myApp.Subgroups);// myApp.Subgroups;
         }
 
 
@@ -54,7 +56,40 @@ namespace Globtroter.ViewModel
 
             if (this.Frame != null)
             {
+                //Frame frame = Window.Current.Content as Frame;
+                //frame.GoBack();
                 this.Frame.Navigate(typeof(GalleryFoto), subgroup);
+            }
+        }
+
+        private void OnButtonClick_AddGroup(object sender, RoutedEventArgs e)
+        {
+           
+           String subfolder = @"Globtroter\" + addGroupText.Text;
+           cerateFolder(subfolder);
+
+           App myApp = Application.Current as App;
+           Subgroups s = new Subgroups();
+           s.Name = addGroupText.Text;
+           s.AddDate = DateTime.Now;
+           myApp.Subgroups.Add(s);
+
+           if (this.Frame != null)
+           {
+               this.Frame.Navigate(typeof(GalleryGroups));
+           }
+        }
+
+        public async void cerateFolder(string folderName)
+        {
+           
+            StorageFolder libraryFolder = Windows.Storage.KnownFolders.PicturesLibrary;
+            try
+            {
+                await libraryFolder.CreateFolderAsync(folderName, CreationCollisionOption.FailIfExists);
+            }
+            catch {
+
             }
         }
     }

@@ -17,8 +17,6 @@
             x:Name="itemsViewSource"
             Source="{Binding Items}"/>
 
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
     </Page.Resources>
 
     <!--
@@ -100,6 +98,9 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBox  x:Name="addGroupText" Text=""  HorizontalAlignment="Right" TextWrapping="Wrap"  VerticalAlignment="Center" Width="300" Grid.Column="1" Margin="0,56,166,52" RenderTransformOrigin="1.765,0.082"/>
+
+            <Button x:Name="addGroup" Click="OnButtonClick_AddGroup" HorizontalAlignment="Right" Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Dodaj Grupę" Grid.Column="1" Margin="0,38,46,-38"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
