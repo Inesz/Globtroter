@@ -24,8 +24,7 @@
                     <Button Click="OnButtonClick_Create" Style="{StaticResource PhotoAppBarButtonStyle}" AutomationProperties.Name="Zrób zdjęcie"/>
                     <Button Click="OnButtonClick_Save" Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
                     <Button Click="OnButtonClick_Gallery" Style="{StaticResource PicturesAppBarButtonStyle}" AutomationProperties.Name="Galeria"/>
-                    <Button Click="OnButtonClick_Groups" Style="{StaticResource FolderppBarButtonStyle}" AutomationProperties.Name="Grupy"/>
-                    <Button Click="OnButtonClick_Artist" Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Artist"/>
+                
                 </StackPanel>
             </Grid>
         </AppBar>

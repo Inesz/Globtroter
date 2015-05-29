@@ -178,5 +178,45 @@ namespace Globtroter.ViewModel
                 this.Frame.Navigate(typeof(MainPage));
             }  
         }
+
+        private async void OnButtonClick_Delete(object sender, RoutedEventArgs e)
+        {
+            //FrameworkElement eSource = e.OriginalSource as FrameworkElement;
+            //string subgroup = eSource.Name.ToString();
+            App myApp = Application.Current as App;
+            string subgroup = myApp._currentFoto.Subgroup;
+            string name = myApp._currentFoto.Name;
+
+            //StorageFile CurrentFile = await ApplicationData.Current.LocalFolder.GetFileAsync
+
+            //usuń plik
+            StorageFolder appFolder = await Windows.Storage.KnownFolders.PicturesLibrary.GetFolderAsync("Globtroter");
+            StorageFolder currentFolder = await appFolder.GetFolderAsync(subgroup);
+            StorageFile File = await currentFolder.GetFileAsync(name);
+
+            await File.DeleteAsync();
+
+            if (myApp.Fotos.Exists(x => x.Name == name && x.Subgroup == subgroup))
+            {
+                // myApp.Fotos.Find(x => x.Name == name && x.Subgroup == subgroup))
+                for (int i = 0; i < myApp.Fotos.Count; i++)
+                {
+                    if (myApp.Fotos[i].Name == name && myApp.Fotos[i].Subgroup == subgroup)
+                    {
+                        //aktualizuj liste
+                        myApp.Fotos.RemoveAt(i);
+                        //aktualizuj isolated storage
+                        string key = "Fotos";
+                        var IS = new IsolatedStorage<Fotos>();
+                        String s = IS.ToXml(myApp.Fotos);
+                        IS.SaveInfo(key, s);
+
+                    }
+                }
+            }
+
+            Frame frame = Window.Current.Content as Frame;
+            frame.GoBack();             
+        }
     }
 }

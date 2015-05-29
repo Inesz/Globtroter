@@ -266,6 +266,7 @@ namespace Globtroter
             }
         }
 
+        /*
         public void OnButtonClick_Artist(object sender, RoutedEventArgs e)
         {
             if (this.Frame != null)
@@ -274,6 +275,7 @@ namespace Globtroter
             }
 
         }
+         * */
 
         public async void cerateFolder(string folderName)
         {
@@ -316,11 +318,6 @@ namespace Globtroter
 
         }
          * */
-
-        private void OnButtonClick_Groups(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         /*live lites*/
         private async void RegisterBackgroundTask()

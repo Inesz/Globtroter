@@ -63,8 +63,7 @@ namespace Globtroter.ViewModel
         }
 
         private void OnButtonClick_AddGroup(object sender, RoutedEventArgs e)
-        {
-           
+        {         
            String subfolder = @"Globtroter\" + addGroupText.Text;
            cerateFolder(subfolder);
 

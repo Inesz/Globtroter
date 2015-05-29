@@ -29,7 +29,8 @@
                         <Button Click="OnButtonClick_SaveChanges" Style="{StaticResource SaveAppBarButtonStyle}" AutomationProperties.Name="Zapisz"/>
                         <Button Click="OnButtonClick_CancelChanges" Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Anuluj"/>
                         <Button Click="OnButtonClick_Home" Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Menu główne"/>
-
+                    <Button Click="OnButtonClick_Delete" Style="{StaticResource AppBarButtonStyle}" AutomationProperties.Name="Usuń"/>
+                        
                 </StackPanel>
                 </Grid>
             </AppBar>
