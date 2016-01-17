@@ -1,2 +1,2 @@
 # Globtroter
-Application for Windows Store nn
+Application for Windows Store nnmm
